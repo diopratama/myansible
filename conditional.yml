@@ -1,0 +1,12 @@
+- hosts: linux2
+  tasks:
+      - name: gather variables
+        include_vars:
+           file: vars.yml
+           name: inc
+      - name: remove programs
+        yum:
+           name: "{{ item }}" 
+           state: absent
+        loop: 
+            "{{ inc.paket }}"

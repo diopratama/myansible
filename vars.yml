@@ -1,0 +1,4 @@
+paket:
+  - httpd
+  - postfix
+  - samba

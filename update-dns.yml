@@ -1,0 +1,9 @@
+- hosts: DNS
+  gather_facts: no
+  tasks:
+  - name: Add or modify ansible.example.org A to 192.168.1.1"
+    nsupdate:
+      server: "10.10.10.100"
+      zone: "ideadio.com"
+      record: "ansible"
+      value: "192.168.1.1"

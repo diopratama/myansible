@@ -1,0 +1,14 @@
+#Test Variable
+- hosts: linux1
+  vars: 
+      - service: httpd
+      - user: doni
+  tasks:
+     # - name: Create User
+      #  user:
+       #   name: "{{ user }}"
+        #  state: present
+      - name: Stop Service
+        service: 
+          name: "{{ service }}"
+          state: stopped

@@ -1,0 +1,6 @@
+- hosts: hostname
+  tasks:
+   - name: Grap IP Information
+     debug:
+       msg: >
+         IP server {{ ansible_hostname }} adalah {{ ansible_default_ipv4.address }}

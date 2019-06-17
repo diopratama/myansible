@@ -1,0 +1,16 @@
+- hosts: linux1
+  tasks:
+      - name: Install Programs
+        yum:
+           name: "{{ item }}"
+           state: present
+        loop:
+           - httpd
+           - ntp
+      - name: Start Programs
+        service:
+           name: "{{ item }}"
+           state: started
+        loop:
+           - httpd
+           - ntp

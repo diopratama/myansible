@@ -1,0 +1,7 @@
+- hosts: cisco
+  tasks:
+     - name: show run
+       ios_command:
+           commands:
+             - show run
+           password: admin

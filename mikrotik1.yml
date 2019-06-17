@@ -1,0 +1,5 @@
+- hosts: mikrotik
+  tasks:
+     - name: run command on remote devices
+       routeros_command:
+        commands: /system routerboard print

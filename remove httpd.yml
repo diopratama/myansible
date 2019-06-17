@@ -1,0 +1,12 @@
+#Script Pertamaku
+
+- hosts: hostname
+  tasks:
+     - name: Create user
+       user:
+           name: jojon
+           state: present
+     - name: Remove httpd
+       yum:
+          name: httpd
+          state: absent

@@ -1,0 +1,10 @@
+- hosts: cisco
+  gather_facts: false
+  connection: local
+
+  tasks:
+    - name: Change Interface Name
+      ios_config:
+       lines:
+          - description - Config by Ansible
+       parents: interface Eth 0/0
